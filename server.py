@@ -16,5 +16,9 @@ def index():
     result += "<p><b>Время:</b> %s</p>" %(cur_time)
     return result
 
+@app.root("/news/<news_id>")
+def news_by_id(news_id):
+	return 'Новость:' + news_id
+
 if __name__ == '__main__':
     app.run()
